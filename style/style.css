@@ -265,20 +265,6 @@ nav.active {
 }
 
 /* -------------------------
-   Sections
-------------------------- */
-section {
-  padding: 2rem 1rem;
-  margin: 1rem 0;
-  background-color: var(--bg-card);
-  border-radius: 8px;
-}
-
-section h2 {
-  margin-bottom: 1rem;
-}
-
-/* -------------------------
    Cartes / compétences
 ------------------------- */
 .card {
@@ -533,3 +519,107 @@ html, body {
   }
 }
 
+/* =========================
+   TIMELINE PROPRE MOBILE
+========================= */
+
+.timeline {
+  position: relative;
+}
+
+/* Chaque bloc */
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Carte */
+.timeline-content { 
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 370px;
+
+  background: var(--bg-card-alt);
+  padding: 1rem;
+  border-radius: 14px;
+
+  box-shadow: 0 8px 20px var(--bg-secondary);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+}
+
+/* Image */
+.timeline-content img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: white;
+  padding: 4px;
+}
+
+/* Texte */
+.timeline-content .date {
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.timeline-content h3 {
+  margin: 4px 0;
+  font-size: 1rem;
+  color: var(--text-light);
+}
+
+.timeline-content p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Bouton */
+.more-btn {
+  margin-top: 0.6rem;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.65rem;
+  border-radius: 6px;
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  color: var(--bg-card);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Contenu caché */
+.more-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+/* Quand actif */
+.timeline-content.active .more-content {
+  max-height: 200px; /* Ajustable */
+  opacity: 1;
+  margin-top: 0.6rem;
+}
