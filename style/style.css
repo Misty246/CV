@@ -51,7 +51,7 @@ button {
 /* -------------------------
    Typographie
 ------------------------- */
-h1, h2, h3 {
+h1, h3 {
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -61,6 +61,13 @@ h1 {
 
 h2, h3 {
   color: var(--primary);
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 1.8rem;
 }
 
 /* -------------------------
@@ -90,6 +97,9 @@ header {
   font-size: 1rem;
   font-weight: normal;
   margin-top: 0.2rem;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+  font-weight: 6f00;
 }
 
 .menu-btn {
@@ -297,15 +307,28 @@ nav.active {
   margin: 0 auto; /* ❌ enlève la marge du bas */
   background-color: #F1EEE7;
 
-  padding: 2rem 1.5rem;
+  padding: 1.5rem 2rem;
   border-radius: 0;
+
 }
 
 .sub-block h2 {
-  color: #FFFFFF;
+  position: relative;          /* necessary for ::after absolute positioning */
+  color: var(--bg-main);       /* remove duplicate white color */
   margin-bottom: 1rem;
-  font-size: 1.5rem;
-  color: var(--bg-main);
+  font-size: 1.8rem;
+}
+
+.sub-block h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.25rem;            /* slight offset below text */
+  width: 120px;                /* doubled length */
+  height: 3px;
+  /* gradient: solid primary then fade to transparent */
+  background: linear-gradient(to right, var(--primary) 0%, var(--primary) 60%, transparent 100%);
+  border-radius: 3px;
 }
 
 .sub-block p {
@@ -330,7 +353,7 @@ nav.active {
 
 .lang-switch {
   position: fixed;
-  left: 1rem;
+  right: 1rem;
   bottom: 1.25rem;
   z-index: 998;
 
@@ -530,7 +553,7 @@ html, body {
 /* Chaque bloc */
 .timeline-item {
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   display: flex;
   justify-content: center;
 }
@@ -619,7 +642,45 @@ html, body {
 
 /* Quand actif */
 .timeline-content.active .more-content {
-  max-height: 200px; /* Ajustable */
+  max-height: 600px; /* Ajustable */
   opacity: 1;
   margin-top: 0.6rem;
+}
+
+/* -------------------------
+   Desktop Block Overlay
+------------------------- */
+#desktop-block {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-main);
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  text-align: center;
+  padding: 2rem;
+}
+
+#desktop-block h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+#desktop-block p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+#desktop-block .mobile-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
 }
