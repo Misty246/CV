@@ -3,24 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV - Accueil</title>
+  <title>CV - Projets</title>
   <link rel="stylesheet" href="style/style.css">
   <script src="js/lang.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="js/reveal.js" defer></script>
+  <script src="js/morebutton.js" defer></script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
   <header>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <div class="header-text">
-      <h1>Kilyan George</h1>
-      <h3><span class="i18n-text" data-i18n="header_feature">Curieux et Polyvalent</span></h3>
+      <a href="index.html" class="btn-link">
+        <h1>Kilyan George</h1>
+        <h3><span class="i18n-text" data-i18n="header_feature">Curieux et Polyvalent</span></h3>
+      </a>
     </div>
     <button class="menu-btn" id="menuBtn">☰</button>
   </header>
 
+  <section class="sub-block">
+    <h2>
+      <span class="i18n-text reveal" data-i18n="project_tittle">Projets</span>
+    </h2>
+  </section>
+
   <div class="main-content">
-    
+    <section class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-content">
+          <img src="assets/CDR-Logo.png" alt="CDR" />
+
+          <div class="text">
+            <span class="i18n-text" data-i18n="project_robot_date">2024</span>
+            <h3><span class="i18n-text" data-i18n="project_robot_title">Coupe de France de Robotique</span></h3>
+            <p><span class="i18n-text" data-i18n="project_robot_description">Développement d'un robot autonome</span></p>
+
+            <button class="more-btn"><span class="i18n-text" data-i18n="more_button_text">En savoir plus</span></button>
+
+            <div class="more-content">
+              <p><span class="i18n-text" data-i18n="project_robot_more">
+                En cours d'écriture.
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-content">
+          <img src="test.png" alt="test" />
+
+          <div class="text">
+            <span class="i18n-text" data-i18n="project_portfolio_date">2026</span>
+            <h3><span class="i18n-text" data-i18n="project_portfolio_title">Création d'un Portfolio en ligne</span></h3>
+            <p><span class="i18n-text" data-i18n="project_portfolio_description">Développement d'un site web professionnel</span></p>
+
+            <button class="more-btn"><span class="i18n-text" data-i18n="more_button_text">En savoir plus</span></button>
+
+            <div class="more-content">
+              <p><span class="i18n-text" data-i18n="project_portfolio_more">
+                En cours d'écriture.
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-content">
+          <img src="assets/Airbus-logo.png" alt="Airbus" />
+
+          <div class="text">
+            <span class="i18n-text" data-i18n="project_airbus_date">2024</span>
+            <h3><span class="i18n-text" data-i18n="project_airbus_title">Projet Airbus</span></h3>
+            <p><span class="i18n-text" data-i18n="project_airbus_description">Développement d'Outils métier standards, optimisation de processus & outils de visualisation</span></p>
+
+            <button class="more-btn"><span class="i18n-text" data-i18n="more_button_text">En savoir plus</span></button>
+
+            <div class="more-content">
+              <p><span class="i18n-text" data-i18n="project_airbus_more">
+                En cours d'écriture.
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
   </div>
 
   <div class="lang-switch">
@@ -28,9 +104,7 @@
     <button data-lang="en" aria-label="English"><img src="flags/en.jpg" alt="English"></button>
   </div>
 
-  <footer>
-
-  </footer>
+<footer><span class="i18n-text" data-i18n="footer_copyright">© 2026 Kilyan George. Tous droits réservés.</span></footer>
 </body>
 
 <nav id="navMenu">
@@ -61,7 +135,15 @@
   <div class="nav-socials">
     <a href="https://www.linkedin.com/in/kilyan-george-7b7bb2282/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
     <a href="mailto:kilyan26082004@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-    <a href="https://github.com/tonpseudo" target="_blank"><i class="fa-brands fa-github"></i></a>
   </div>
 </nav>
+
+<!-- Desktop Block Overlay -->
+<div id="desktop-block" style="display: none;">
+  <div class="mobile-icon">
+    <i class="fas fa-mobile-alt"></i>
+  </div>
+  <h1>Site en Version Mobile</h1>
+  <p>Ce site est actuellement optimisé uniquement pour les appareils mobiles. Veuillez accéder au site depuis votre smartphone ou tablette pour une meilleure expérience.</p>
+</div>
 </html>
