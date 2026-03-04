@@ -3,10 +3,12 @@ document.querySelectorAll(".more-btn").forEach(button => {
     const card = button.closest(".timeline-content");
     card.classList.toggle("active");
 
+    const currentLang = localStorage.getItem("lang") || "fr";
+    const span = button.querySelector("span");
     if (card.classList.contains("active")) {
-      button.textContent = "Réduire";
+      span.textContent = translations[currentLang].reduce_button_text;
     } else {
-      button.textContent = "En savoir plus";
+      span.textContent = translations[currentLang].more_button_text;
     }
   });
 });
