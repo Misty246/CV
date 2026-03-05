@@ -1,149 +1,289 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV - Projets</title>
-  <link rel="stylesheet" href="style/style.css">
-  <script src="js/lang.js" defer></script>
-  <script src="js/main.js" defer></script>
-  <script src="js/reveal.js" defer></script>
-  <script src="js/morebutton.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV - Projets</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <script src="js/lang.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/reveal.js" defer></script>
+    <script src="js/morebutton.js" defer></script>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
 
-<body>
-  <header>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <div class="header-text">
-      <a href="index.html" class="btn-link">
-        <h1>Kilyan George</h1>
-        <h3><span class="i18n-text" data-i18n="header_feature">Curieux et Polyvalent</span></h3>
-      </a>
-    </div>
-    <button class="menu-btn" id="menuBtn">☰</button>
-  </header>
-
-  <section class="sub-block">
-    <h2>
-      <span class="i18n-text reveal" data-i18n="project_tittle">Projets</span>
-    </h2>
-  </section>
-
-  <div class="main-content">
-    <section class="timeline">
-      <div class="timeline-item reveal">
-        <div class="timeline-content">
-          <img src="assets/CDR-Logo.png" alt="CDR" />
-
-          <div class="text">
-            <span class="i18n-text" data-i18n="project_robot_date">2024</span>
-            <h3><span class="i18n-text" data-i18n="project_robot_title">Coupe de France de Robotique</span></h3>
-            <p><span class="i18n-text" data-i18n="project_robot_description">Développement d'un robot autonome</span></p>
-
-            <button class="more-btn"><span class="i18n-text" data-i18n="more_button_text">En savoir plus</span></button>
-
-            <div class="more-content">
-              <p><span class="i18n-text" data-i18n="project_robot_more">
-                En cours d'écriture.
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
+  <body>
+    <header>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+      />
+      <div class="header-text">
+        <a href="index.html" class="btn-link">
+          <h1>Kilyan George</h1>
+          <h3>
+            <span class="i18n-text" data-i18n="header_feature"
+              >Curieux et Polyvalent</span
+            >
+          </h3>
+        </a>
       </div>
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </header>
 
-      <div class="timeline-item reveal">
-        <div class="timeline-content">
-          <img src="test.png" alt="test" />
-
-          <div class="text">
-            <span class="i18n-text" data-i18n="project_portfolio_date">2026</span>
-            <h3><span class="i18n-text" data-i18n="project_portfolio_title">Création d'un Portfolio en ligne</span></h3>
-            <p><span class="i18n-text" data-i18n="project_portfolio_description">Développement d'un site web professionnel</span></p>
-
-            <button class="more-btn"><span class="i18n-text" data-i18n="more_button_text">En savoir plus</span></button>
-
-            <div class="more-content">
-              <p><span class="i18n-text" data-i18n="project_portfolio_more">
-                En cours d'écriture.
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="timeline-item reveal">
-        <div class="timeline-content">
-          <img src="assets/Airbus-logo.png" alt="Airbus" />
-
-          <div class="text">
-            <span class="i18n-text" data-i18n="project_airbus_date">2024</span>
-            <h3><span class="i18n-text" data-i18n="project_airbus_title">Projet Airbus</span></h3>
-            <p><span class="i18n-text" data-i18n="project_airbus_description">Développement d'Outils métier standards, optimisation de processus & outils de visualisation</span></p>
-
-            <button class="more-btn"><span class="i18n-text" data-i18n="more_button_text">En savoir plus</span></button>
-
-            <div class="more-content">
-              <p><span class="i18n-text" data-i18n="project_airbus_more">
-                En cours d'écriture.
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
+    <section class="sub-block">
+      <h2>
+        <span class="i18n-text reveal" data-i18n="project_title">Projets</span>
+      </h2>
     </section>
-  </div>
 
-  <div class="lang-switch">
-    <button data-lang="fr" aria-label="Français"><img src="flags/fr.png" alt="Français"></button>
-    <button data-lang="en" aria-label="English"><img src="flags/en.jpg" alt="English"></button>
-  </div>
+    <div class="main-content">
+      <section class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <img src="assets/CDR-Logo.png" alt="CDR" />
 
-<footer><span class="i18n-text" data-i18n="footer_copyright">© 2026 Kilyan George. Tous droits réservés.</span></footer>
-</body>
+            <div class="text">
+              <span class="i18n-text" data-i18n="project_robot_date">2024</span>
+              <h3>
+                <span class="i18n-text" data-i18n="project_robot_title"
+                  >Coupe de France de Robotique</span
+                >
+              </h3>
+              <p>
+                <span class="i18n-text" data-i18n="project_robot_description"
+                  >Développement d'un robot autonome</span
+                >
+              </p>
 
-<nav id="navMenu">
-  <div class="nav-header">
-    <h1>Kilyan George</h1>
-    <h2><span class="i18n-text" data-i18n="header_feature">Curieux et Polyvalent</span></h2>
-  </div>
+              <button class="more-btn">
+                <span class="i18n-text" data-i18n="more_button_text"
+                  >En savoir plus</span
+                >
+              </button>
 
-  <div class="nav-link">
-    <a href="index.html"><i class="fa-solid fa-house"></i><span class="i18n-text" data-i18n="nav_home">Accueil</span></a>
-  </div>
-  <div class="nav-link">
-    <a href="experiences.html"><i class="fa-solid fa-briefcase"></i><span class="i18n-text" data-i18n="nav_experiences">Expériences</span></a>
-  </div>
-  <div class="nav-link">
-    <a href="projects.html"><i class="fa-solid fa-folder-open"></i><span class="i18n-text" data-i18n="nav_projects">Projets</span></a>
-  </div>
-  <div class="nav-link">
-    <a href="skills.html"><i class="fa-solid fa-lightbulb"></i><span class="i18n-text" data-i18n="nav_skills">Aptitudes</span></a>
-  </div>
-  <div class="nav-link">
-    <a href="certificate.html"><i class="fas fa-award"></i><span class="i18n-text" data-i18n="nav_certificate">Certificat</span></a>
-  </div>
-  <div class="nav-link">
-    <a href="contact.html"><i class="fa-solid fa-envelope"></i><span class="i18n-text" data-i18n="nav_contact">Contact</span></a>
-  </div>
+              <div class="more-content">
+                <p>
+                  <span class="i18n-text" data-i18n="project_robot_more">
+                    En cours d'écriture.
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  <div class="nav-socials">
-    <a href="https://www.linkedin.com/in/kilyan-george-7b7bb2282/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-    <a href="mailto:kilyan26082004@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-  </div>
-</nav>
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <img src="assets/portfolio-logo.jpg" alt="test" />
 
-<!-- Desktop Block Overlay -->
-<div id="desktop-block" style="display: none;">
-  <div class="mobile-icon">
-    <i class="fas fa-mobile-alt"></i>
+            <div class="text">
+              <span class="i18n-text" data-i18n="project_portfolio_date"
+                >2026</span
+              >
+              <h3>
+                <span class="i18n-text" data-i18n="project_portfolio_title"
+                  >Création d'un Portfolio en ligne</span
+                >
+              </h3>
+              <p>
+                <span
+                  class="i18n-text"
+                  data-i18n="project_portfolio_description"
+                  >Développement d'un site web professionnel</span
+                >
+              </p>
+
+              <button class="more-btn">
+                <span class="i18n-text" data-i18n="more_button_text"
+                  >En savoir plus</span
+                >
+              </button>
+
+              <div class="more-content">
+                <p>
+                  <span class="i18n-text" data-i18n="project_portfolio_more">
+                    L’objectif de ce projet était de créer un portfolio en ligne
+                    afin de présenter mes compétences, mes expériences et mes
+                    réalisations de manière professionnelle et claire.
+                    <br /><br />
+                    Pour le développer, j’ai utilisé HTML, CSS et JavaScript, en
+                    mettant l’accent sur la simplicité, la lisibilité et
+                    l’esthétique. Le site a été conçu pour être responsive, afin
+                    d’offrir une expérience utilisateur optimale sur les
+                    appareils mobiles.
+                    <br /><br />
+                    À travers ce projet, je souhaite également montrer ma
+                    capacité à m’adapter et à sortir de ma zone de confort.
+                    Toujours dans une démarche d’amélioration et d’optimisation,
+                    ce site reflète ma volonté d’apprendre, d’évoluer et de
+                    perfectionner mes compétences.
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-content">
+            <img src="assets/Airbus-logo.png" alt="Airbus" />
+
+            <div class="text">
+              <span class="i18n-text" data-i18n="project_airbus_date"
+                >2024</span
+              >
+              <h3>
+                <span class="i18n-text" data-i18n="project_airbus_title"
+                  >Projet Airbus</span
+                >
+              </h3>
+              <p>
+                <span class="i18n-text" data-i18n="project_airbus_description"
+                  >Développement d'Outils métier standards, optimisation de
+                  processus & outils de visualisation</span
+                >
+              </p>
+
+              <button class="more-btn">
+                <span class="i18n-text" data-i18n="more_button_text"
+                  >En savoir plus</span
+                >
+              </button>
+
+              <div class="more-content">
+                <p>
+                  <span class="i18n-text" data-i18n="project_airbus_more">
+                    À mon arrivée chez Airbus en Supply Chain, j’ai rapidement
+                    constaté un manque de standardisation : chaque Supply
+                    Officer utilisait ses propres fichiers et méthodes de
+                    travail. Cela entraînait un suivi peu fiable, beaucoup
+                    d’actions manuelles et une communication difficile entre les
+                    métiers.<br />
+                    <br />
+
+                    Pour améliorer cette situation, j’ai développé et mis en
+                    place plusieurs solutions : <br /><br />
+
+                    - création d’un fichier standard commun utilisé par 20
+                    Supply Officers <br />
+                    - automatisation des extractions de données depuis SAP
+                    <br />
+                    - revue et amélioration des processus métier <br />
+                    - mise en place d’indicateurs de performance (fiabilité
+                    fournisseur, dérives, etc.) <br />
+                    - mise en place de MoM (Minutes of Meeting) pour structurer
+                    les réunions <br />
+                    <br />
+                    Grâce à cet outil et à ces améliorations, les Supply
+                    Officers ont pu réduire d’environ 2 heures par jour les
+                    tâches manuelles, notamment liées aux extractions et à la
+                    consolidation de données. Cela a permis d’obtenir une
+                    meilleure visibilité sur l’approvisionnement, une
+                    anticipation des risques améliorée et une fiabilité accrue
+                    dans la gestion des fournisseurs.
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="lang-switch">
+      <button data-lang="fr" aria-label="Français">
+        <img src="flags/fr.png" alt="Français" />
+      </button>
+      <button data-lang="en" aria-label="English">
+        <img src="flags/en.jpg" alt="English" />
+      </button>
+    </div>
+
+    <footer>
+      <span class="i18n-text" data-i18n="footer_copyright"
+        >© 2026 Kilyan George. Tous droits réservés.</span
+      >
+    </footer>
+  </body>
+
+  <nav id="navMenu">
+    <div class="nav-header">
+      <h1>Kilyan George</h1>
+      <h2>
+        <span class="i18n-text" data-i18n="header_feature"
+          >Curieux et Polyvalent</span
+        >
+      </h2>
+    </div>
+
+    <div class="nav-link">
+      <a href="index.html"
+        ><i class="fa-solid fa-house"></i
+        ><span class="i18n-text" data-i18n="nav_home">Accueil</span></a
+      >
+    </div>
+    <div class="nav-link">
+      <a href="experiences.html"
+        ><i class="fa-solid fa-briefcase"></i
+        ><span class="i18n-text" data-i18n="nav_experiences"
+          >Expériences</span
+        ></a
+      >
+    </div>
+    <div class="nav-link">
+      <a href="projects.html"
+        ><i class="fa-solid fa-folder-open"></i
+        ><span class="i18n-text" data-i18n="nav_projects">Projets</span></a
+      >
+    </div>
+    <div class="nav-link">
+      <a href="skills.html"
+        ><i class="fa-solid fa-lightbulb"></i
+        ><span class="i18n-text" data-i18n="nav_skills">Aptitudes</span></a
+      >
+    </div>
+    <div class="nav-link">
+      <a href="certificate.html"
+        ><i class="fas fa-award"></i
+        ><span class="i18n-text" data-i18n="nav_certificate"
+          >Certificat</span
+        ></a
+      >
+    </div>
+    <div class="nav-link">
+      <a href="contact.html"
+        ><i class="fa-solid fa-envelope"></i
+        ><span class="i18n-text" data-i18n="nav_contact">Contact</span></a
+      >
+    </div>
+
+    <div class="nav-socials">
+      <a
+        href="https://www.linkedin.com/in/kilyan-george-7b7bb2282/"
+        target="_blank"
+        ><i class="fa-brands fa-linkedin"></i
+      ></a>
+      <a href="mailto:kilyan26082004@gmail.com"
+        ><i class="fa-solid fa-envelope"></i
+      ></a>
+    </div>
+  </nav>
+
+  <!-- Desktop Block Overlay -->
+  <div id="desktop-block" style="display: none">
+    <div class="mobile-icon">
+      <i class="fas fa-mobile-alt"></i>
+    </div>
+    <h1>Site en Version Mobile</h1>
+    <p>
+      Ce site est actuellement optimisé uniquement pour les appareils mobiles.
+      Veuillez accéder au site depuis votre smartphone ou tablette pour une
+      meilleure expérience.
+    </p>
   </div>
-  <h1>Site en Version Mobile</h1>
-  <p>Ce site est actuellement optimisé uniquement pour les appareils mobiles. Veuillez accéder au site depuis votre smartphone ou tablette pour une meilleure expérience.</p>
-</div>
 </html>
