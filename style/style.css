@@ -642,7 +642,7 @@ html, body {
 
 /* Quand actif */
 .timeline-content.active .more-content {
-  max-height: 600px; /* Ajustable */
+  max-height: 800px; /* Ajustable */
   opacity: 1;
   margin-top: 0.6rem;
 }
