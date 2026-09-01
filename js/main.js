@@ -5,22 +5,6 @@ const langButtons = document.querySelectorAll(".lang-switch button");
 
 let currentLang = localStorage.getItem('lang') || 'fr';
 
-// Fonction pour détecter si l'appareil est mobile
-// function isMobileDevice() {
-//   const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-//   const isMobileUA = /android|avantgo|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(userAgent);
-//   const isSmallScreen = window.innerWidth <= 768;
-//   return isMobileUA || isSmallScreen;
-// }
-
-// Bloquer l'accès pour les ordinateurs de bureau
-document.addEventListener('DOMContentLoaded', () => {
-  if (!isMobileDevice()) {
-    document.getElementById('desktop-block').style.display = 'flex';
-    document.body.style.overflow = 'hidden'; // Empêcher le scroll
-  }
-});
-
 // Ouvrir / fermer menu
 menuBtn?.addEventListener("click", () => {
     navMenu.classList.toggle("active");
@@ -71,7 +55,7 @@ if (btn.getAttribute('data-lang') === currentLang) {
 
 // Télécharger le CV correspondant à la langue
 downloadBtn?.addEventListener('click', () => {
-    let file = currentLang === 'fr' ? 'assets/CV_FR.pdf' : 'assets/CV_EN.pdf';
+    let file = currentLang === 'fr' ? 'assets/CVKG_FR.pdf' : 'assets/CVKG_EN.pdf';
     const a = document.createElement('a');
     a.href = file;
     a.download = file.split('/').pop();
