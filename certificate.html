@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CV - Certificat & Permis</title>
+    <title>CV - Contact</title>
     <link rel="stylesheet" href="style/style.css" />
     <script src="js/lang.js" defer></script>
     <script src="js/main.js" defer></script>
-    <script src="js/reveal.js" defer></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -17,78 +16,59 @@
   <body>
     <div class="phone-frame">
       <header>
-            <link
+      <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap"
         rel="stylesheet"
       />
       <div class="header-text">
         <a href="index.html" class="btn-link">
           <h1>Kilyan George</h1>
-          <h3><span class="i18n-text" data-i18n="header_feature">Curieux et Polyvalent</span></h3>
+          <h3>
+            <span class="i18n-text" data-i18n="header_feature"
+              >Curieux et Polyvalent</span
+            >
+          </h3>
         </a>
       </div>
       <button class="menu-btn" id="menuBtn">☰</button>
     </header>
 
-    <section class="sub-block">
-      <h2>
-        <span class="i18n-text reveal" data-i18n="certificate_title">
-          >Certificats & Permis</span
-        >
-      </h2>
-    </section>
-
     <div class="main-content">
-      <div class="bubble-container">
-        <div class="bubble-card reveal">
-          <img src="assets/bac.png" alt="Diplome BAC" />
-          <p>
-            <span class="i18n-text" data-i18n="diploma_bac">
-              Baccalauréat (mention bien).
-            </span>
-          </p>
-          <div class="buttons">
-              <a href="assets/bac.pdf" target="_blank" class="btn-tertiary">
-                <span class="i18n-text" data-i18n="btn_download_bac">
-                  Afficher le Diplome
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="bubble-card reveal">
-            <img src="assets/toeic-logo.jpg" alt="Certificat TOEIC" />
-            <p>
-              <span class="i18n-text" data-i18n="certificate_toeic">
-                Certification TOEIC validé (B2+).
-              </span>
-            </p>
-            <div class="buttons">
-              <a href="assets/TOEIC.pdf" target="_blank" class="btn-tertiary">
-                <span class="i18n-text" data-i18n="btn_download_toeic">
-                  Afficher le certificat
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="bubble-card reveal">
-          <img src="assets/voiture.jpg" alt="Permis voiture" />
-          <p>
-            <span class="i18n-text" data-i18n="certificate_license"
-              >Permis voiture Français et véhiculé.</span
+      <section class="sub-block contact">
+        <h2>
+          <span class="i18n-text" data-i18n="contact_title">Me contacter</span>
+        </h2>
+        <p>
+          <span class="i18n-text" data-i18n="contact_intro">
+            N’hésitez pas à me contacter pour toute question, opportunité ou
+            collaboration.
+          </span>
+        </p>
+
+        <div class="contact-infos">
+          <div class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:kilyan26082004@gmail.com"
+              >kilyan26082004@gmail.com</a
             >
-          </p>
-        </div>
-          <div class="bubble-card reveal">
-            <img src="assets/Secourisme.jpg" alt="Formation secourisme" />
-            <p>
-              <span class="i18n-text" data-i18n="certificate_first_aid"
-                >Formation aux gestes de premier secours (PSC1).</span
-              >
-            </p>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+33667567718">+33 6 67 56 77 18</a>
+          </div>
+          <div class="contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="i18n-text" data-i18n="contact_location"
+              >Amiens, France</span
+            >
           </div>
         </div>
+      </section>
+      <div class="full-width-image">
+        <img src="assets/Amiens.jpg" alt="Illustration de Amiens" />
       </div>
     </div>
+
     <div class="lang-switch">
       <button data-lang="fr" aria-label="Français">
         <img src="flags/fr.png" alt="Français" />
@@ -98,7 +78,11 @@
       </button>
     </div>
 
-    <footer><span class="i18n-text" data-i18n="footer_copyright">© 2026 Kilyan George. Tous droits réservés.</span></footer>
+    <footer>
+      <span class="i18n-text" data-i18n="footer_copyright"
+        >© 2026 Kilyan George. Tous droits réservés.</span
+      >
+    </footer>
   </body>
 
   <nav id="navMenu">
@@ -162,16 +146,21 @@
         ><i class="fa-solid fa-envelope"></i
       ></a>
     </div>
-  </nav>
+      </nav>
 
       <!-- Desktop Block Overlay -->
-      <div id="desktop-block" style="display: none;">
+      <div id="desktop-block" style="display: none">
         <div class="mobile-icon">
           <i class="fas fa-mobile-alt"></i>
         </div>
         <h1>Site en Version Mobile</h1>
-        <p>Ce site est actuellement optimisé uniquement pour les appareils mobiles. Veuillez accéder au site depuis votre smartphone ou tablette pour une meilleure expérience.</p>
+        <p>
+          Ce site est actuellement optimisé uniquement pour les appareils mobiles.
+          Veuillez accéder au site depuis votre smartphone ou tablette pour une
+          meilleure expérience.
+        </p>
       </div>
     </div>
     <!-- fin phone-frame -->
   </body>
+</html>
