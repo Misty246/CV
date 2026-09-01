@@ -20,6 +20,77 @@
 }
 
 /* -------------------------
+   Phone Frame
+------------------------- */
+.phone-frame {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-main);
+  overflow: hidden;
+}
+
+/* Desktop: Phone frame effect */
+@media (min-width: 769px) {
+  body {
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #111 0%, #000 100%);
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .phone-frame {
+    width: 390px;
+    height: 844px;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(255, 255, 255, 0.05);
+    border-radius: 50px;
+    border: 12px solid #1a1a1a;
+    background-color: var(--bg-main);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: auto;
+  }
+
+  /* Notch (encoché) */
+  .phone-frame::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 25px;
+    background-color: #000;
+    border-radius: 0 0 25px 25px;
+    z-index: 10;
+  }
+
+  /* Bandes latérales (volume) */
+  .phone-frame::after {
+    content: '';
+    position: absolute;
+    right: -12px;
+    top: 100px;
+    width: 4px;
+    height: 60px;
+    background-color: #333;
+    border-radius: 2px;
+  }
+}
+
+/* Mobile: Full width */
+@media (max-width: 768px) {
+  .phone-frame {
+    height: auto;
+  }
+}
+
+/* -------------------------
    Base
 ------------------------- */ 
 body {
@@ -82,6 +153,12 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
+}
+
+@media (min-width: 769px) {
+  header {
+    padding-top: 2.5rem;
+  }
 }
 
 .header-text {
@@ -361,6 +438,14 @@ nav.active {
   gap: 0.3rem;
 }
 
+@media (min-width: 769px) {
+  .lang-switch {
+    position: fixed;
+    right: calc(50% - 210px);
+    bottom: calc(50% - 422px - 20px);
+  }
+}
+
 .lang-switch button {
   width: 36px;
   height: 24px;
@@ -454,10 +539,25 @@ footer {
   left: 0;
 }
 
+@media (min-width: 769px) {
+  footer {
+    position: sticky;
+    bottom: 0;
+  }
+}
+
 .main-content {
   flex: 1; /* prend tout l'espace restant sous le header */
   background-color: var(--text-light);
   padding-bottom: 30px; /* espace pour le footer */
+  overflow-y: auto;
+}
+
+@media (min-width: 769px) {
+  .main-content {
+    overflow-y: auto;
+    padding-bottom: 60px;
+  }
 }
 
 .bubble-container {
