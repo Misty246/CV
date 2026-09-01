@@ -6,12 +6,12 @@ const langButtons = document.querySelectorAll(".lang-switch button");
 let currentLang = localStorage.getItem('lang') || 'fr';
 
 // Fonction pour détecter si l'appareil est mobile
-function isMobileDevice() {
-  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-  const isMobileUA = /android|avantgo|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(userAgent);
-  const isSmallScreen = window.innerWidth <= 768;
-  return isMobileUA || isSmallScreen;
-}
+// function isMobileDevice() {
+//   const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+//   const isMobileUA = /android|avantgo|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(userAgent);
+//   const isSmallScreen = window.innerWidth <= 768;
+//   return isMobileUA || isSmallScreen;
+// }
 
 // Bloquer l'accès pour les ordinateurs de bureau
 document.addEventListener('DOMContentLoaded', () => {
