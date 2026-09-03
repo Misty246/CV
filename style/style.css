@@ -35,17 +35,9 @@
   padding-bottom: 4rem; /* Espace exactement égal à la hauteur du footer (4rem) */
 }
 
-@media (min-width: 769px) {
-  header {
-    position: absolute; /* En desktop, absolute se fixe au conteneur .phone-frame */
-    width: 100%;
-    top: 0;
-    left: 0;
-  }
-}
 
 /* Desktop: Phone frame effect */
-@media (min-width: 769px) {
+@media (min-width: 669px) {
   body {
     margin: 0;
     padding: 20px;
@@ -56,8 +48,8 @@
   }
 
   .phone-frame {
-    width: 410px;
-    height: 844px;
+    width: 360px;
+    height: 669px;
     box-shadow: 0 0 60px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(255, 255, 255, 0.05);
     border-radius: 50px;
     border: 12px solid #1a1a1a;
@@ -93,13 +85,6 @@
     height: 60px;
     background-color: #333;
     border-radius: 2px;
-  }
-}
-
-/* Mobile: Full width */
-@media (max-width: 768px) {
-  .phone-frame {
-    height: auto;
   }
 }
 
@@ -154,6 +139,9 @@ h2 {
   font-size: 1.8rem;
 }
 
+/* -------------------------
+   Header & Footer (Mobile par défaut)
+------------------------- */
 header {
   display: flex;
   justify-content: space-between;
@@ -161,14 +149,60 @@ header {
   padding: 1rem;
   background-color: var(--bg-secondary);
   
-  /* Fixation stricte */
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;           /* 🔥 Force l'étirement sur toute la largeur disponible */
   width: 100%;
-  height: 65px;       /* Hauteur fixe pour calculer les marges */
+  height: 65px;
   z-index: 1000;
+}
+
+footer {
+  background-color: var(--bg-secondary);
+  color: var(--text-light);
+  font-size: 0.8rem;
+  
+  /* Flexbox pour aligner texte à gauche et drapeaux à droite */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 0 1rem;
+  width: 100%;
+  height: 4rem;
+  
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* -------------------------
+Correction PC (Desktop)
+------------------------- */
+@media (min-width: 669px) {
+  /* Le header reste accroché en haut DU TÉLÉPHONE */
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+
+  @media (min-width: 669px) {
+    footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  /* Permet au contenu de défiler SEULEMENT à l'intérieur du téléphone */
+  .main-content {
+    overflow-y: auto;
+    height: 100%;
+  }
 }
 
 .header-text {
@@ -276,7 +310,6 @@ nav.active {
   flex-shrink: 0;
   text-align: center;
   background-color: var(--bg-main);
-  margin-top: 65px;
 }
 
 
@@ -400,7 +433,7 @@ nav.active {
 
 }
 
-@media (min-width: 769px) {
+@media (min-width:669px) {
   .sub-block {
     padding: 1.5rem 2rem;
   }
@@ -445,14 +478,27 @@ nav.active {
   animation: zoomOut 0.4s ease forwards;
 }
 
+/* -------------------------
+   Language Switcher (Mobile)
+------------------------- */
 .lang-switch {
-  position: fixed;
+  position: static;
   right: 1rem;
-  bottom: 1.25rem;
-  z-index: 998;
+  z-index: 1001; /* Doit être supérieur au footer pour rester cliquable */
 
   display: flex;
+  align-items: center;
   gap: 0.3rem;
+}
+
+/* -------------------------
+   Correction PC (Desktop)
+------------------------- */
+@media (min-width: 669px) {
+  .lang-switch {
+    position: static; /* Reste ancré à l'intérieur de .phone-frame */
+    right: 1rem;
+  }
 }
 
 .lang-switch button {
@@ -531,38 +577,11 @@ html, body {
   overflow-y: auto;
 }
 
-footer {
-  background-color: var(--bg-secondary); /* bleu foncé */
-  color: var(--text-light);
-  align-items: center;
-  font-size: 0.8rem;
-  display: flex;
-  /* ↑ Hauteur via padding ↑ */
-  padding: 1rem 1rem; /* 2rem en haut et bas, 1rem à gauche et droite */
-
-  /* Pour que le footer prenne toute la largeur */
-  width: 100%;
-  height: 4rem;
-
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  bottom: 0;
-  z-index: 100;
-}
-
 .main-content {
   flex: 1; /* prend tout l'espace restant sous le header */
   background-color: var(--text-light);
   padding-bottom: 30px; /* espace pour le footer */
   /* overflow-y: auto; */
-}
-
-@media (min-width: 769px) {
-  .main-content {
-    overflow-y: auto;
-    padding-bottom: 60px;
-  }
 }
 
 .bubble-container {
@@ -575,7 +594,7 @@ footer {
   padding: 0 1rem 2rem;     /* ❌ plus de padding-top */
 }
 
-@media (min-width: 769px) {
+@media (min-width: 669px) {
   .bubble-container {
     padding: 1rem 1.5rem 2rem 1.5rem;
   }
@@ -660,7 +679,7 @@ html, body {
   padding: 0 1rem;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 669px) {
   .timeline-item {
     padding: 0 1.5rem;
   }
