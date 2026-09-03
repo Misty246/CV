@@ -150,15 +150,9 @@ header {
   align-items: center;
   padding: 1rem;
   background-color: var(--bg-secondary);
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 100;
-}
-
-@media (min-width: 769px) {
-  header {
-    padding-top: 1.5rem;
-  }
 }
 
 .header-text {
