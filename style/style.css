@@ -22,18 +22,22 @@
 /* -------------------------
    Phone Frame
 ------------------------- */
+/* Décalage global pour libérer l'espace du header et du footer */
 .phone-frame {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: var(--bg-main);
-  /* overflow: hidden; */
+  
+  /* 🔥 Espacements réservés */
+  padding-top: 65px;    /* Espace exactement égal à la hauteur du header */
+  padding-bottom: 4rem; /* Espace exactement égal à la hauteur du footer (4rem) */
 }
 
 @media (min-width: 769px) {
   header {
-    position: absolute; /* Reste collé en haut du cadre du téléphone */
+    position: absolute; /* En desktop, absolute se fixe au conteneur .phone-frame */
     width: 100%;
     top: 0;
     left: 0;
@@ -150,9 +154,6 @@ h2 {
   font-size: 1.8rem;
 }
 
-/* -------------------------
-   Header Fixe
-------------------------- */
 header {
   display: flex;
   justify-content: space-between;
@@ -160,13 +161,14 @@ header {
   padding: 1rem;
   background-color: var(--bg-secondary);
   
-  /* Fixation */
+  /* Fixation stricte */
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;       /* Force le header à prendre toute la largeur */
-  height: 65px;      /* Fixe une hauteur précise pour compenser en dessous */
-  z-index: 1000;     /* Assure qu'il passe au-dessus du reste du contenu */
+  right: 0;           /* 🔥 Force l'étirement sur toute la largeur disponible */
+  width: 100%;
+  height: 65px;       /* Hauteur fixe pour calculer les marges */
+  z-index: 1000;
 }
 
 .header-text {
