@@ -377,39 +377,33 @@ nav.active {
 /* -------------------------
    Sous-bloc blanc
 ------------------------- */
+
 .sub-block {
   width: 100%;
   max-width: 1200px;
-
-  margin: 0 auto; /* ❌ enlève la marge du bas */
   background-color: #F1EEE7;
-
-  padding: 1.5rem 2rem;
   border-radius: 0;
-
-}
-
-@media (min-width: 769px) {
-  .sub-block {
-    padding: 1.5rem 2rem;
-  }
+  padding: 1rem 2rem;
+  /* Centrage vertical */
+  display: flex;
+  align-items: center;       /* Centre le texte en hauteur */
+  min-height: 80px;          /* Ajustez la hauteur souhaitée */
 }
 
 .sub-block h2 {
-  position: relative;          /* necessary for ::after absolute positioning */
-  color: var(--bg-main);       /* remove duplicate white color */
-  margin-bottom: 1rem;
+  position: relative;
+  color: var(--bg-main);
   font-size: 1.8rem;
+  margin: 0;                 /* Supprime la marge par défaut du h2 */
 }
 
 .sub-block h2::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -0.25rem;            /* slight offset below text */
-  width: 120px;                /* doubled length */
+  bottom: -0.25rem;
+  width: 120px;
   height: 3px;
-  /* gradient: solid primary then fade to transparent */
   background: linear-gradient(to right, var(--primary) 0%, var(--primary) 60%, transparent 100%);
   border-radius: 3px;
 }
@@ -621,7 +615,6 @@ footer {
 
 section.sub-block {
   margin: 0 !important;
-  padding-bottom: 0.5rem;
 }
 
 /* =========================
@@ -648,6 +641,7 @@ html, body {
 
 .timeline {
   position: relative;
+  margin-top: 22px;
 }
 
 /* Chaque bloc */
