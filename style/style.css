@@ -389,6 +389,12 @@ nav.active {
 
 }
 
+@media (min-width: 769px) {
+  .sub-block {
+    padding: 1.5rem 2rem;
+  }
+}
+
 .sub-block h2 {
   position: relative;          /* necessary for ::after absolute positioning */
   color: var(--bg-main);       /* remove duplicate white color */
@@ -429,21 +435,13 @@ nav.active {
 }
 
 .lang-switch {
-  position: fixed;
+  position: absolute;
   right: 1rem;
   bottom: 1.25rem;
   z-index: 998;
 
   display: flex;
   gap: 0.3rem;
-}
-
-@media (min-width: 769px) {
-  .lang-switch {
-    position: fixed;
-    right: calc(50% - 210px);
-    bottom: calc(50% - 422px - 20px);
-  }
 }
 
 .lang-switch button {
@@ -570,6 +568,12 @@ footer {
   padding: 0 1rem 2rem;     /* ❌ plus de padding-top */
 }
 
+@media (min-width: 769px) {
+  .bubble-container {
+    padding: 1rem 1.5rem 2rem 1.5rem;
+  }
+}
+
 /* Chaque bulle */
 .bubble-card {
   background-color: var(--bg-card-alt);
@@ -656,10 +660,18 @@ html, body {
   margin-bottom: 2rem;
   display: flex;
   justify-content: center;
+  padding: 0 1rem;
+}
+
+@media (min-width: 769px) {
+  .timeline-item {
+    padding: 0 1.5rem;
+  }
 }
 
 /* Carte */
 .timeline-content { 
+  position: relative;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -681,11 +693,11 @@ html, body {
 
 /* Image */
 .timeline-content img {
+  position: relative;
   width: 60px;
   height: 60px;
   object-fit: contain;
   border-radius: 8px;
-  background: white;
   padding: 4px;
 }
 
