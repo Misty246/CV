@@ -31,6 +31,15 @@
   /* overflow: hidden; */
 }
 
+@media (min-width: 769px) {
+  header {
+    position: absolute; /* Reste collé en haut du cadre du téléphone */
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
 /* Desktop: Phone frame effect */
 @media (min-width: 769px) {
   body {
@@ -142,7 +151,7 @@ h2 {
 }
 
 /* -------------------------
-   Header
+   Header Fixe
 ------------------------- */
 header {
   display: flex;
@@ -150,9 +159,14 @@ header {
   align-items: center;
   padding: 1rem;
   background-color: var(--bg-secondary);
+  
+  /* Fixation */
   position: fixed;
   top: 0;
-  z-index: 100;
+  left: 0;
+  width: 100%;       /* Force le header à prendre toute la largeur */
+  height: 65px;      /* Fixe une hauteur précise pour compenser en dessous */
+  z-index: 1000;     /* Assure qu'il passe au-dessus du reste du contenu */
 }
 
 .header-text {
@@ -260,6 +274,7 @@ nav.active {
   flex-shrink: 0;
   text-align: center;
   background-color: var(--bg-main);
+  margin-top: 65px;
 }
 
 
