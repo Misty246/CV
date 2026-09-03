@@ -626,16 +626,6 @@ html, body {
   overflow-y: auto;
 }
 
-/* Footer normal en mobile */
-@media (max-width: 768px) {
-  footer {
-    position: relative;
-  }
-  body {
-    font-size: 1rem;
-  }
-}
-
 /* =========================
    TIMELINE PROPRE MOBILE
 ========================= */
