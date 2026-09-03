@@ -29,7 +29,6 @@
   flex-direction: column;
   background-color: var(--bg-main);
   overflow: hidden;
-  position: relative; /* Repère essentiel pour absolute */
 }
 
 /* Desktop: Phone frame effect */
@@ -143,7 +142,7 @@ h2 {
 }
 
 /* -------------------------
-   Header Fixe
+   Header
 ------------------------- */
 header {
   display: flex;
@@ -151,14 +150,9 @@ header {
   align-items: center;
   padding: 1rem;
   background-color: var(--bg-secondary);
-
-  /* Fixé en haut du phone-frame */
-  position: absolute;
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 4.5rem; /* Height fixe pour calculer les marges */
-  z-index: 990;
+  z-index: 100;
 }
 
 @media (min-width: 769px) {
@@ -520,54 +514,37 @@ html, body {
   overflow-y: auto;
 }
 
-/* -------------------------
-   Footer Fixe
-------------------------- */
 footer {
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-secondary); /* bleu foncé */
   color: var(--text-light);
   align-items: center;
   font-size: 0.8rem;
   display: flex;
-  padding: 1rem 1rem;
-  width: 100%;
-  height: 4rem; /* Height fixe pour calculer les marges */
+  /* ↑ Hauteur via padding ↑ */
+  padding: 1rem 1rem; /* 2rem en haut et bas, 1rem à gauche et droite */
 
-  /* Fixé en bas du phone-frame */
-  position: absolute;
+  /* Pour que le footer prenne toute la largeur */
+  width: 100%;
+  height: 4rem;
+
   bottom: 0;
   left: 0;
-  z-index: 990;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
 }
 
-/* On nettoie les anciennes règles mobile qui modifiaient le footer */
-@media (max-width: 768px) {
-  footer {
-    position: absolute; /* Reste fixe aussi sur mobile */
-  }
-}
-
-/* -------------------------
-   Zone de défilement
-------------------------- */
 .main-content {
-  flex: 1;
+  flex: 1; /* prend tout l'espace restant sous le header */
   background-color: var(--text-light);
-  
-  /* Active le défilement interne */
+  padding-bottom: 30px; /* espace pour le footer */
   overflow-y: auto;
-  
-  /* Empêche le contenu d'être masqué sous le header et le footer */
-  padding-top: 4.5rem;   /* Hauteur du header */
-  padding-bottom: 4rem;   /* Hauteur du footer */
 }
 
-/* Mise à jour du style ordinateur pour la zone de scroll */
 @media (min-width: 769px) {
   .main-content {
     overflow-y: auto;
-    padding-top: 4.5rem;
-    padding-bottom: 4rem;
+    padding-bottom: 60px;
   }
 }
 
