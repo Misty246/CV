@@ -449,7 +449,6 @@ nav.active {
 .sub-block h2 {
   position: relative;          /* necessary for ::after absolute positioning */
   color: var(--bg-main);       /* remove duplicate white color */
-  margin-bottom: 1rem;
   font-size: 1.8rem;                       /* slight adjustment for visual alignment */
 }
 
@@ -467,6 +466,7 @@ nav.active {
 
 .sub-block p {
   font-size: 1rem;
+  margin-top: 1rem;
   line-height: 1.6;
   color: var(--bg-main);
 }
@@ -677,6 +677,7 @@ html, body {
 
 .timeline {
   position: relative;
+  margin-top: 1.5rem;
 }
 
 /* Chaque bloc */
