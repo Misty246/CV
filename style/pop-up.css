@@ -1,0 +1,65 @@
+/* Toujours caché par défaut : le JS décide s'il faut l'afficher */
+#desktop-popup {
+  display: none;
+}
+
+@media (min-width: 669px) {
+  /* Le style reste identique, mais la visibilité est pilotée par JS */
+  #desktop-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(13, 23, 38, 0.85);
+    backdrop-filter: blur(5px);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .popup-content {
+    background-color: var(--bg-card-alt);
+    border: 2px solid var(--primary);
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 420px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    color: var(--text-light);
+  }
+
+  .popup-content .mobile-icon {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+
+  .popup-content h2 {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+  }
+
+  .popup-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+
+  .popup-content button {
+    background-color: var(--primary);
+    color: var(--bg-card);
+    font-weight: bold;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .popup-content button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+  }
+}
