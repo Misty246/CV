@@ -23,13 +23,15 @@
    Phone Frame
 ------------------------- */
 /* Décalage global pour libérer l'espace du header et du footer */
+/* Conteneur principal qui défile */
 .phone-frame {
   display: flex;
   flex-direction: column;
   background-color: var(--bg-main);
+  position: relative;
+  overflow-y: auto; /* Active le défilement à l'intérieur du cadre */
   
-  /* Garde seulement le padding du bas pour le footer fixed */
-  padding-bottom: 4rem; 
+  padding-bottom: 4rem; /* Espace réservé pour le footer fixed */
 }
 
 
@@ -141,13 +143,14 @@ h2 {
 ------------------------- */
 /* Header bloqué en haut */
 header {
-  position: absolute;
+  position: absolute; /* Ou position: fixed si la phone-frame n'est pas le conteneur relatif */
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 10; /* Reste bien au-dessus du main-content */
+  z-index: 100; /* Assure que le header reste au-dessus du contenu */
   background-color: var(--bg-main);
+  
   display: flex;
   align-items: center;
   padding: 0.8rem 1.2rem;
