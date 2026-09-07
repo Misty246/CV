@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CV - Accueil</title>
     <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/pop-up.css" />
     <script src="js/main.js" defer></script>
     <script src="js/lang.js" defer></script>
+    <script src="js/pop-up.js" defer></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -28,7 +30,7 @@
             <h1>Kilyan George</h1>
             <h3>
               <span class="i18n-text" data-i18n="header_feature"
-                >Curieux et Polyvalent</span
+                >Apprenti Ingénieur</span
               >
             </h3>
           </a>
@@ -117,7 +119,7 @@
           <h1>Kilyan George</h1>
           <h2>
             <span class="i18n-text" data-i18n="header_feature"
-              >Curieux et Polyvalent</span
+              >Apprenti Ingénieur</span
             >
           </h2>
         </div>
@@ -176,5 +178,16 @@
       </nav>
     </div>
     <!-- fin phone-frame -->
+    <div id="desktop-popup">
+      <div class="popup-content">
+        <i class="fa-solid fa-mobile-screen-button mobile-icon"></i>
+        <h2>Affichage optimisé sur mobile</h2>
+        <p>
+          Ce portfolio est conçu comme une application mobile. Pour une
+          expérience optimale, consultez-le depuis un smartphone.
+        </p>
+        <button id="closePopupBtn">Continuer sur PC</button>
+      </div>
+    </div>
   </body>
 </html>
