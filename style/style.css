@@ -589,7 +589,7 @@ html, body {
   flex: 1;
   background-color: var(--text-light);
   padding-top: 80px; /* 👈 Décale TOUT le contenu (sub-block inclus) sous le header */
-  padding-bottom: 4rem; /* Espace pour le footer */
+  padding-bottom: 1rem; /* Espace pour le footer */
   overflow-y: auto;
 }
 
