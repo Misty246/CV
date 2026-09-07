@@ -24,15 +24,12 @@
 ------------------------- */
 /* Décalage global pour libérer l'espace du header et du footer */
 .phone-frame {
-  width: 100%;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: var(--bg-main);
   
-  /* 🔥 Espacements réservés */
-  padding-top: 65px;    /* Espace exactement égal à la hauteur du header */
-  padding-bottom: 4rem; /* Espace exactement égal à la hauteur du footer (4rem) */
+  /* Garde seulement le padding du bas pour le footer fixed */
+  padding-bottom: 4rem; 
 }
 
 
@@ -48,8 +45,8 @@
   }
 
   .phone-frame {
-    width: 360px;
-    height: 669px;
+    width: 418px;
+    height: 869px;
     box-shadow: 0 0 60px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(255, 255, 255, 0.05);
     border-radius: 50px;
     border: 12px solid #1a1a1a;
@@ -142,19 +139,35 @@ h2 {
 /* -------------------------
    Header & Footer (Mobile par défaut)
 ------------------------- */
+/* Header bloqué en haut */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: var(--bg-secondary);
-  
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
-  height: 65px;
-  z-index: 1000;
+  z-index: 10; /* Reste bien au-dessus du main-content */
+  background-color: var(--bg-main);
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+.img-profile {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid var(--primary);
+  object-fit: cover;
+  margin: 0; /* On retire les anciennes marges top/bottom */
+}
+
+.header-text {
+  margin-right: auto; /* Pousse le bouton menu tout à droite */
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
@@ -188,30 +201,26 @@ Correction PC (Desktop)
     left: 0;
     right: 0;
     width: 100%;
+    z-index: 10;
   }
 
-  @media (min-width: 669px) {
+  .main-content {
+    overflow-y: auto;
+    height: 100%;
+    padding-top: 90px; /* 👈 S'assure que le premier bloc (sub-block) démarre sous le notch/header */
+  }
+
     footer {
       position: absolute;
       bottom: 0;
       left: 0;
     }
-  }
-
-  /* Permet au contenu de défiler SEULEMENT à l'intérieur du téléphone */
-  .main-content {
-    overflow-y: auto;
-    height: 100%;
-  }
-}
-
-.header-text {
-  display: flex;
-  flex-direction: column;
 }
 
 .header-text h1 {
   font-size: 1.5rem;
+  margin: 0;
+  line-height: 1.2;
 }
 
 .header-text h3 {
@@ -221,6 +230,8 @@ Correction PC (Desktop)
   font-family: 'Playfair Display', serif;
   letter-spacing: 1px;
   font-weight: 6f00;
+  margin: 0;
+  line-height: 1.2;
 }
 
 .menu-btn {
@@ -320,7 +331,7 @@ nav.active {
   border: 3px solid var(--primary);
   object-fit: cover;
   margin-bottom: 1rem;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .hero h1 {
@@ -421,22 +432,15 @@ nav.active {
 /* -------------------------
    Sous-bloc blanc
 ------------------------- */
+/* Le sub-block s'aligne désormais naturellement */
 .sub-block {
   width: 100%;
   max-width: 1200px;
-
-  margin: 0 auto; /* ❌ enlève la marge du bas */
+  margin: 0 auto;
   background-color: #F1EEE7;
-
-  padding: 1.5rem 2rem;
-  border-radius: 0;
-
-}
-
-@media (min-width:669px) {
-  .sub-block {
-    padding: 1.5rem 2rem;
-  }
+  padding: 1rem 2rem 0.5rem 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .sub-block h2 {
@@ -577,11 +581,13 @@ html, body {
   overflow-y: auto;
 }
 
+/* Conteneur principal */
 .main-content {
-  flex: 1; /* prend tout l'espace restant sous le header */
+  flex: 1;
   background-color: var(--text-light);
-  padding-bottom: 30px; /* espace pour le footer */
-  /* overflow-y: auto; */
+  padding-top: 80px; /* 👈 Décale TOUT le contenu (sub-block inclus) sous le header */
+  padding-bottom: 4rem; /* Espace pour le footer */
+  overflow-y: auto;
 }
 
 .bubble-container {
